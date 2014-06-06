@@ -1,4 +1,3 @@
-
 complete <- function(directory, id = 1:332) {
   files <- paste(getwd(), "/", directory, "/", substr(1000+id,2,4), ".csv", sep = "")
   df <- na.omit(do.call("rbind", lapply(files, read.csv, header = TRUE)) )
